@@ -1,0 +1,36 @@
+h1{font-weight: 100;letter-spacing: 2px;}
+h2{font-weight: 100;}
+h4{font-weight: 100;font-size: 20px;}
+.wiki{padding: 14px;background-color: #f5f2f0;}
+.in_iframe, .in_iframe body, .in_iframe .wiki{height: 100%;}
+.wiki h3{font-family: 'Linux Libertine','Georgia','Times',serif; }
+.mobile_wrap{
+    height: 520px;
+    overflow: hidden;
+}
+.mobile{
+    flex: 0 0 478px;
+    max-width: 478px;
+    height: 906px;
+    background-image: url(./img/iphonex.png);
+    position: relative;
+}
+.mobile .clock{
+    position: absolute;
+    background-color: #f9f9f9;
+    font-family: 'Helvetica', sans-serif;
+    color: #000000;
+    top: 35px;
+    left: 74px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 52px;
+    text-align: center;
+}
+.mobile iframe{
+    position: absolute;
+    top: 119px;
+    left: 54px;
+    width: 370px;
+    height: 630px;
+}
