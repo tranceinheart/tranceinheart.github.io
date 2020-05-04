@@ -112,7 +112,7 @@
                             <div class="row align-items-center">
                                 <div class="col-3 text-right">delay: </div>
                                 <div class="col-6">
-                                    <input data-property="delay" class="form-control" type="text" value="1000">
+                                    <input data-property="delay" class="form-control" type="text" value="100">
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
             <p>Event to listen</p>
             <strong>timer:</strong>
             <code><i>Integer</i></code> <small>(ms)</small><br>
-            <p>Hides a hint automatically in milliseconds 0 - never hide</p>
+            <p>Hides a hint automatically in milliseconds (0 - never hide)</p>
             <strong>delay:</strong>
             <code><i>Integer</i></code> <small>(ms)</small><br>
             <p>Time delay before showing (sometimes usefull when trigger is mouseover)</p>
@@ -215,7 +215,7 @@
             <br>
             <strong>text:</strong>
             <code><i>String</i></code>
-            <p>Allow to force your text or HTML instead of data-hint attribute.</p>
+            <p>Allow to force your text or HTML instead of data-hint attribute</p>
             <br>
             <strong>stickiness:</strong>
             <code><i>Integer</i></code> <small>(px)</small>
@@ -250,13 +250,13 @@
     </code>
 </pre>
                 </li>
-                <li class="mt-4">Set different options to different nodes: init Hint.js by different class name with differents options list</li>
+                <li class="mt-4">Set different options to different nodes: init Hint.js by different class with different options list</li>
                 <li class="mt-4">Edit CSS styles manually by <code>.html-hint .html-hint-content</code> and <code>.html-hint .html-hint-pin</code> selector</li>
             </ul>
         </div>
     </div>
 </div>
-<div class="footer container mt-5">
+<div class="footer container mt-5 mb-3">
     <div class="row">
         <div class="col-12 text-center">
             <p>Copyright © 2020 Pavel Terekhov. MIT License.</p>
@@ -293,7 +293,7 @@
     var params = {
         animate: true,
         closeBy: ['mouseOut'],
-        delay: 1000,
+        delay: 100,
         timer: 2000,
         pin: true,
         theme: "light",
