@@ -42,17 +42,17 @@
             <hr>
             <p>Include from dist/</p>
 <pre class="language-html mb-4">
-    <code class="language-html">...
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hint.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hint.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-    ...</code>
+    <code class="language-html"><span class="token operator">...</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hint.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hint.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token operator">...</span></code>
 </pre>
             <p>Add your class and data-hint attribution to node</p>
 
 <pre class="language-html mb-4">
-    <code class="language-html">...
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>some_class<span class="token punctuation">"</span></span> <span class="token attr-name">data-hint</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hint_text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span>some term<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-    ...</code>
+    <code class="language-html"><span class="token operator">...</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>some_class<span class="token punctuation">"</span></span> <span class="token attr-name">data-hint</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hint_text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span>some term<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token operator">...</span></code>
 </pre>
 
             <p>Initialize hints</p>
@@ -76,9 +76,9 @@
                         <div class="col"></div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">pin: </div>
+                                <div class="col-3 text-right">pin: </div>
                                 <div class="col-6">
-                                    <div class="btn-group" role="group">
+                                    <div class="btn-group" role="group" data-property="pin">
                                         <button type="button" class="btn btn-primary">true</button>
                                         <button type="button" class="btn btn-secondary">false</button>
                                     </div>
@@ -87,9 +87,9 @@
                         </div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">animate: </div>
+                                <div class="col-3 text-right">animate: </div>
                                 <div class="col-6">
-                                    <div class="btn-group" role="group">
+                                    <div class="btn-group" role="group" data-property="animate">
                                         <button type="button" class="btn btn-primary">true</button>
                                         <button type="button" class="btn btn-secondary">false</button>
                                     </div>
@@ -98,9 +98,9 @@
                         </div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">trigger: </div>
+                                <div class="col-3 text-right">trigger: </div>
                                 <div class="col-6">
-                                    <div class="btn-group" role="group">
+                                    <div class="btn-group" role="group" data-property="trigger">
                                         <button type="button" class="btn btn-primary">mouseover</button>
                                         <button type="button" class="btn btn-secondary">click</button>
                                     </div>
@@ -109,42 +109,51 @@
                         </div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">delay: </div>
+                                <div class="col-3 text-right">delay: </div>
                                 <div class="col-6">
-                                    <input class="form-control" type="text" placeholder="Default input">
+                                    <input data-property="delay" class="form-control" type="text" value="50">
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">vertical: </div>
+                                <div class="col-3 text-right">timer: </div>
                                 <div class="col-6">
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-secondary">top</button>
-                                        <button type="button" class="btn btn-secondary">middle</button>
-                                        <button type="button" class="btn btn-secondary">bottom</button>
+                                    <input data-property="timer" class="form-control" type="text" value="50">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <div class="col-3 text-right">vertical: </div>
+                                <div class="col-6">
+                                    <div class="btn-group" role="group" data-property="vertical">
                                         <button type="button" class="btn btn-primary">auto</button>
+                                        <button type="button" class="btn btn-secondary">top</button>
+                                        <!--<button type="button" class="btn btn-secondary">middle</button>-->
+                                        <button type="button" class="btn btn-secondary">bottom</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">closeBy: </div>
+                                <div class="col-3 text-right">closeBy: </div>
                                 <div class="col-6">
-                                    <div class="btn-group" role="group">
+                                    <div class="btn-group" role="group" data-property="closeBy">
                                         <button type="button" class="btn btn-primary">mouseOut</button>
                                         <button type="button" class="btn btn-secondary">clickOutside</button>
                                         <button type="button" class="btn btn-secondary">button</button>
                                     </div>
                                 </div>
+                                <div class="col-6 offset-3 mt-1"><p style="font-size: 80%"><a href="#closeBy">Read more</a> about <b>closeBy</b> option</p></div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="row align-items-center">
-                                <div class="col-4 text-right">theme: </div>
+                                <div class="col-3 text-right">theme: </div>
                                 <div class="col-6">
-                                    <div class="btn-group" role="group">
+                                    <div class="btn-group" role="group" data-property="theme">
                                         <button type="button" class="btn btn-primary">light</button>
                                         <button type="button" class="btn btn-secondary">dark</button>
                                     </div>
@@ -155,7 +164,7 @@
                     </div>
                 </div>
                 <div class="col mobile">
-                    <iframe id="screen" frameborder="0" src="iframe.html?var=1"></iframe>
+                    <iframe id="screen" frameborder="0" src=""></iframe>
                     <div class="clock"></div>
                 </div>
             </div>
@@ -164,9 +173,45 @@
 </div>
 <div class="container" id="Options">
     <div class="row mt-5">
-        <div class="col-12">
+        <div class="col-12 options">
             <h2>Options</h2>
             <hr>
+            <strong>pin:</strong>
+            <code>false | true</code>
+            <br>
+            <p>A little triangle pointer to initial node</p>
+            <strong style="font-size: 18px">animate:</strong>
+            <code>false | true</code>
+            <br>
+            <p>Fade animation</p>
+            <strong>trigger:</strong>
+            <code>"mouseover" | "click"</code>
+            <br>
+            <p>Event to listen</p>
+            <strong>timer:</strong>
+            <code><i>Integer as milliseconds</i></code><br>
+            <p>Hides a hint automatically in milliseconds 0 - never hide</p>
+            <strong>delay:</strong>
+            <code><i>Integer as milliseconds</i></code><br>
+            <p>Time delay before showing (sometimes usefull when trigger is mouseover)</p>
+            <strong>vertical:</strong>
+            <code>"auto" | "top" | "middle" | "bottom"</code><br>
+            <p>Set vertical position of hint. <span class="warn">Middle position has issues</span></p>
+            <strong id="closeBy">closeBy:</strong>
+            <code>["mouseOut" | "scroll" | "resize" | "clickOutside" | "button"]</code>
+            <p>Set array of triggers to close the hint. Supported parameters:</p>
+            <ul>
+                <li>mouseOut</li>
+                <li>resize</li>
+                <li>scroll</li>
+                <li>clickOutside</li>
+                <li>button (exit button inside hint)</li>
+            </ul>
+            <p>Note: hint opened by mouseover will be closed by mouseout automatically</p>
+            <strong>theme:</strong>
+            <code>"light" | "dark"</code>
+
+            Allow to force your own text (or HTML).
 
         </div>
     </div>
@@ -176,7 +221,38 @@
         <div class="col-12">
             <h2>Lifehacks</h2>
             <hr>
-
+            <ul>
+                <li class="mt-4">Hint.js allow to set hint text by <code>text</code> option instead of <code>data-hint</code> attribute</li>
+                <li class="mt-4">Hint.js allow to set link to another node with <code>text</code> option or <code>data-hint</code> attribute by ID selector
+<pre class="language-html">
+    <code class="language-html"><span class="token operator">...</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>some_class<span class="token punctuation">"</span></span> <span class="token attr-name">data-hint</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#my_hint<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>some term<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag">
+    <span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#my_hint<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Hint content<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token operator">...</span></code>
+</pre>
+                </li>
+                <li class="mt-4">Hint.js supports line breaked text, but this feature may work incorrectly. Set a special <code>stickiness</code> option, that equals line-height property of text.<br>
+                    For example line-height is 24px:
+<pre class="language-js">
+    <code class="language-js">
+    document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">"some_class"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hint</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token operator">...</span>
+        stickiness<span class="token punctuation">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </code>
+</pre>
+                </li>
+                <li class="mt-4">Set different options to different nodes: init Hint.js by different class name with differents options list</li>
+                <li class="mt-4">Edit CSS styles manually by <code>.html-hint .html-hint-content</code> and <code>.html-hint .html-hint-pin</code> selector</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <p>Copyright © 2020 Pavel Terekhov. MIT License.</p>
         </div>
     </div>
 </div>
@@ -195,7 +271,7 @@
         if($.attr(this, 'href') != "#"){
             var target = $.attr(this, 'href');
             $page.animate({
-                scrollTop: $(target).offset().top-68
+                scrollTop: $(target).offset().top-10
             }, 400);
             return false;
         }
@@ -214,18 +290,28 @@
         pin: true,
         theme: "light",
         trigger: "mouseover",
-        vertical: "auto"
+        vertical: "auto",
+        stickiness: 24
     };
     $(document).on("click", "#Playground .btn", function(){
         var parent = $(this).closest(".btn-group");
-        if(parent.attr('data-multi') == "true"){
-            
-        }else{
-            parent.find(".btn-primary").removeClass("btn-primary").addClass("btn-secondary");
-            $(this).addClass("btn-primary").removeClass("btn-secondary");
+
+        parent.find(".btn-primary").removeClass("btn-primary").addClass("btn-secondary");
+        $(this).addClass("btn-primary").removeClass("btn-secondary");
+        var value = $(this).html();
+        if(value == "true" || value == "false"){
+            value = (value === "true");
         }
+        
+        params[parent.attr("data-property")] = value;
         $("#screen").attr("src", "iframe.html?var="+JSON.stringify(params));
-        console.log(JSON.stringify(params));
+    });
+    $(document).on("keyup", "#Playground input", function(){
+        params[$(this).attr("data-property")] = $(this).val();
+        $("#screen").attr("src", "iframe.html?var="+JSON.stringify(params));
+    });
+    $(document).ready(function(){
+        $("#screen").attr("src", "iframe.html?var="+JSON.stringify(params));
     });
 </script>
 </body>

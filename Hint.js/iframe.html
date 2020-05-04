@@ -23,8 +23,11 @@
 </div>
 <script src="lib/hint.js"></script>
 <script>
-    console.log(window.location.search.substr(5).replace("%22",'"'));
-    document.getElementsByClassName("show-html-hint").hint(JSON.parse(window.location.search.substr(5)));
+    var get = window.location.search.substr(5);
+    while(get.indexOf("%22") != -1){
+        get = get.replace('%22','"');
+    }
+    document.getElementsByClassName("show-html-hint").hint(JSON.parse(get));
 </script>
 </body>
 </html>
